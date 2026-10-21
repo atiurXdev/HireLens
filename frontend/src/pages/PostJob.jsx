@@ -15,7 +15,7 @@ function PostJob() {
     setStatusMessage('Posting job...');
 
     try {
-      const response = await axios.post('http://localhost:5001/api/jobs', {
+      const response = await axios.post('https://hirelens-backend-78wg.onrender.com/api/jobs', {
         title,
         description,
         experience_required: parseInt(experience)

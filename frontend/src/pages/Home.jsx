@@ -6,7 +6,7 @@ function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:5001/api/jobs')
+    axios.get('https://hirelens-backend-78wg.onrender.com/api/jobs')
       .then((res) => {
         setJobs(res.data);
         setLoading(false);

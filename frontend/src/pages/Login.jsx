@@ -14,7 +14,7 @@ function Login() {
     setStatusMessage('Authenticating...');
 
     try {
-      const response = await axios.post('http://localhost:5001/api/auth/login', {
+      const response = await axios.post('https://hirelens-backend-78wg.onrender.com/api/auth/login', {
         email,
         password
       });

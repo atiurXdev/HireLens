@@ -8,7 +8,7 @@ function Applications() {
   const [statusFilter, setStatusFilter] = useState('All');
 
   useEffect(() => {
-    axios.get('http://localhost:5001/api/applications')
+    axios.get('https://hirelens-backend-78wg.onrender.com/api/applications')
       .then((res) => {
         setApps(res.data);
         setLoading(false);

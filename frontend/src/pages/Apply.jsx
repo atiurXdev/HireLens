@@ -30,7 +30,7 @@ function Apply() {
 
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.post('http://localhost:5001/api/applications/upload', formData, {
+      const response = await axios.post('https://hirelens-backend-78wg.onrender.com/api/applications/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${token}`
