@@ -7,8 +7,13 @@ const db = require('./config/db');
 
 const app = express();
 
-// Middleware
-app.use(cors());
+// Enable Explicit CORS Policy for Production Frontend
+app.use(cors({
+  origin: '*', // Production deployment me sabhi clients allow honge
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 app.use(express.json());
 
 // Define Routes
